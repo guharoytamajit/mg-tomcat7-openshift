@@ -1,0 +1,29 @@
+templateScript: /myweb/templates/pages/home.ftl
+title: HOME
+renderType: freemarker
+dialog: myweb:pages/home
+areas:
+  services:
+    dialog: myweb:pages/services
+    renderType: freemarker
+    templateScript: /myweb/templates/pages/services.ftl
+    availableComponents:
+      serviceComponent:
+        id: myweb:components/serviceComponent
+  portfolio:
+    dialog: myweb:pages/portfolio
+    renderType: freemarker
+    templateScript: /myweb/templates/pages/portfolio.ftl
+    availableComponents:
+      serviceComponent:
+        id: myweb:components/portfolioComponent
+  about:
+    dialog: myweb:pages/portfolio
+    renderType: freemarker
+    templateScript: /myweb/templates/pages/about.ftl
+    availableComponents:
+      serviceComponent:
+        id: myweb:components/aboutComponent
+  team:
+    type: noComponent
+    templateScript: /myweb/templates/pages/team.ftl              

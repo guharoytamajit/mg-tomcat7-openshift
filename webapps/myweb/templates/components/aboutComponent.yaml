@@ -1,0 +1,4 @@
+templateScript: /myweb/templates/components/aboutComponent.ftl
+renderType: freemarker
+dialog: myweb:components/aboutComponent
+title: About Component

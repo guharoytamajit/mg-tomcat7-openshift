@@ -1,0 +1,29 @@
+form:
+  tabs:
+    - name: tabText
+      label: Texts
+      fields:
+        - name: serviceComponentDate
+          class: info.magnolia.ui.form.field.definition.DateFieldDefinition
+          label: Date
+          dateFormat: yyyy-MM
+        - name: serviceComponentTitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+        - name: serviceComponentDesc
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Description
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Select image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

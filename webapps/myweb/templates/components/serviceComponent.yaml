@@ -1,0 +1,4 @@
+templateScript: /myweb/templates/components/serviceComponent.ftl
+renderType: freemarker
+dialog: myweb:components/serviceComponent
+title: Service Component

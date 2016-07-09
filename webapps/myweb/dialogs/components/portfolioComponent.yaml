@@ -1,0 +1,43 @@
+form:
+  tabs:
+    - name: tabText
+      label: Texts
+      fields:
+        - name: portfolioComponentTitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+        - name: portfolioComponentCategory
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Category
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Select image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+    - name: tabText2
+      label: Dialog
+      fields:
+        - name: portfolioDialogDesc
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Dialog Description
+        - name: portfolioDialogShortDesc
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Dialog Short Description
+        - name: dialogimage
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Select Dialog Image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

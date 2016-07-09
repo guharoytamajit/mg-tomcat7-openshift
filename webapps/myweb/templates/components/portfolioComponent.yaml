@@ -1,0 +1,4 @@
+templateScript: /myweb/templates/components/portfolioComponent.ftl
+renderType: freemarker
+dialog: myweb:components/portfolioComponent
+title: Portfolio Component
